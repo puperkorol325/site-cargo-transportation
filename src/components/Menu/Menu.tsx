@@ -4,19 +4,23 @@ import { Button } from "@mui/material";
 import { styled } from '@mui/material/styles';
 import { CustomizedButton } from '../CustomizedButton/CustomizedButton'
 
+type MenuProps = {
+    onOpenTicketForm: () => void;
+}
 
-export const Menu:React.FC<{}> = () => {
+export const Menu:React.FC<MenuProps> = ({ onOpenTicketForm }) => {
 
     return (
         <div className={styles.Navbar}>
             <div className={styles.NavbarTop}>
-                <img src={require('../../img/logo.jpg')} className={styles.logo} alt="Логотип" onClick={() => document.location=''}/>
+                <img src={require('../../img/logo.png')} className={styles.logo} alt="Логотип" onClick={() => document.location=''}/>
                 <div className={styles.additionalInfo}>
                     <div className={styles.phoneNumberContainer}>
                         <h1 className={styles.phoneNumber}>8 (916) 031 25-99</h1>
+                        <h1 className={styles.email} onClick={() => document.location='mailto:perevozkasamosvaly@gmail.com'}>perevozkasamosvaly@gmail.com</h1>
                     </div>
                     <div className={styles.leaveTicketContainer}>
-                        <CustomizedButton className={styles.leaveTicketButton}>Оставить заявку</CustomizedButton>
+                        <CustomizedButton className={styles.leaveTicketButton} onClick={onOpenTicketForm}>Оставить заявку</CustomizedButton>
                     </div>
                 </div>
             </div>

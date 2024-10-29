@@ -7,3 +7,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.openedTicketForm {
+  overflow: hidden;
+}
+
+.closedTicketForm {
+  overflow: scroll;
+}
+
+.containerFiltered {
+  filter: brightness(0.5);
+}

@@ -59,3 +59,21 @@
     color: white;
 }
 
+@media screen and (max-width: 1000px) {
+    .cards {
+        flex-direction: column;
+        height: 600px;
+    }
+
+    .card {
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .moreButton {
+        width: 80%;
+        height: 60px;
+    }
+}
+

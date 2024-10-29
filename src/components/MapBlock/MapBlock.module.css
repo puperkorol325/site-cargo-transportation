@@ -8,6 +8,8 @@
 
 .map {
     border: 0;
+    width: 50%;
+    height: 700px;
 }
 
 .infoContainer {
@@ -22,7 +24,7 @@
 }
 
 .leaveTicketButton {
-    width: 25%;
+    width: 30%;
     height: 60px;
     margin-top: 50px;
     transition: 0.5s;
@@ -41,4 +43,64 @@
 
 .contactsContainer {
     margin-top: 50px;
+}
+
+.email {
+    cursor: pointer;
+}
+
+.link {
+    color: rgb(4, 35, 102);
+    font-style: inherit;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 1000px) {
+    .mapBlock {
+        flex-direction: column;
+        height: 1000px;
+    }
+
+    .infoContainer {
+        width: 100%;
+        height: 650px;
+    }
+
+    .map {
+        width: 100%;
+    }
+
+    .leaveTicketButton {
+        width: 50%;
+        height: 80px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .mapBlock {
+        flex-direction: column;
+        height: 1000px;
+    }
+
+    .infoContainer {
+        width: 100%;
+        height: 650px;
+    }
+
+    .map {
+        width: 100%;
+    }
+
+    .info {
+        margin-left: 1%;
+    }
+
+    .address {
+        width: 90%;
+    }
+
+    .leaveTicketButton {
+        width: 99%;
+        height: 80px;
+    }
 }
