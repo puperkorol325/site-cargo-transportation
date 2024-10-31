@@ -16,27 +16,24 @@ export const TicketForm:React.FC<TicketFormProps> = ({ onCloseTicketForm }) => {
     const [number,setNumber] = useState("");
     const [comment,setComment] = useState("");
 
-    const handleSubmit = async (e: React.FormEvent) => {
-        const formData = new FormData();
-        formData.append('name', name);
-        formData.append('email', email);
-        formData.append('number', number);
-        formData.append('comment', comment);
+    const handleSubmit = async (e:any) => {
+        e.preventDefault();
 
-        try {
-            const response = await fetch('sendmail.php', {
-                method: 'POST',
-                body: formData,
-            });
+        const formData = new FormData(e.target);
 
-            const result = await response.json();
-            alert(result.message);
-            if (response.ok) {
-                onCloseTicketForm(); 
-            }
-        } catch (error) {
-            alert("Произошла ошибка отправки! Попробуйте ещё раз.");
-            console.error(error);
+        formData.append("access_key", "f774ed51-0b92-4235-a848-b70559f20ec4");
+
+        const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            body: formData
+        });
+
+        const data = await response.json();
+
+        if (data.success) {
+            onCloseTicketForm();
+        } else {
+            console.log("Error", data);
         }
     };
 
@@ -45,10 +42,10 @@ export const TicketForm:React.FC<TicketFormProps> = ({ onCloseTicketForm }) => {
             <img src={require('../../img/cross.png')} className={styles.cross} onClick={onCloseTicketForm} alt="" />
             <div className={styles.formContainer}>
                 <h2 className={styles.title}>Оставьте заявку!</h2>
-                <form className={styles.form} method="get" id="form" onSubmit={handleSubmit}>
+                <form className={styles.form} id="form" onSubmit={handleSubmit}>
                     <TextField
-                        id="name"
-                        name="name"
+                        id="Имя"
+                        name="Имя"
                         type="text" 
                         label="Ваше имя" 
                         variant="outlined"
@@ -58,8 +55,8 @@ export const TicketForm:React.FC<TicketFormProps> = ({ onCloseTicketForm }) => {
                         className={styles.textField}
                     />
                     <TextField 
-                        id="email" 
-                        name="email"
+                        id="Электронная почта" 
+                        name="Электронная почта"
                         type="email" 
                         label="Ваше e-mail" 
                         variant="outlined" 
@@ -69,8 +66,8 @@ export const TicketForm:React.FC<TicketFormProps> = ({ onCloseTicketForm }) => {
                         className={styles.textField}
                     />
                     <TextField 
-                        id="number" 
-                        name="number"
+                        id="Номер телефона" 
+                        name="Номер телефона"
                         type="tel" 
                         label="Ваш номер телефона" 
                         variant="outlined"
@@ -84,8 +81,8 @@ export const TicketForm:React.FC<TicketFormProps> = ({ onCloseTicketForm }) => {
                         className={styles.textField}
                     />
                     <TextField
-                        id="comment"
-                        name="comment"
+                        id="Комментарий"
+                        name="Комментарий"
                         label="Комментарий"
                         multiline
                         maxRows={4}

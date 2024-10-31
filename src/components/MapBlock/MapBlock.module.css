@@ -4,6 +4,7 @@
     display: flex;
     justify-content: center;
     font-family: "Nunito", sans-serif;
+    background-color: white;
 }
 
 .map {
@@ -79,16 +80,18 @@
 @media screen and (max-width: 600px) {
     .mapBlock {
         flex-direction: column;
-        height: 1000px;
+        height: auto;
     }
 
     .infoContainer {
         width: 100%;
-        height: 650px;
+        height: auto;
+        padding-bottom: 5%;
     }
 
     .map {
         width: 100%;
+        height: 400px;
     }
 
     .info {

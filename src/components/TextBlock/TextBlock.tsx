@@ -14,7 +14,7 @@ export const TextBlock:React.FC<TextBlock> = ({ title, text, imagePath}) => {
                 <h1 className={styles.title}>{title}</h1>
                 <div className={styles.article}>
                     {text.map((item) => (
-                        !Array.isArray(item) ? (<p>{item}</p>) : (<ul className={styles.list}>{item.map((i) => (
+                        !Array.isArray(item) ? (<p className={styles.text}>{item}</p>) : (<ul className={styles.list}>{item.map((i) => (
                             <li className={styles.listItem}>{i}</li>
                         ))}</ul>)
                     ))}

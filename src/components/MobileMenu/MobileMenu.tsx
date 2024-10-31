@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from "./MobileMenu.module.css";
 import { CustomizedButton } from "../CustomizedButton/CustomizedButton";
+import { Link } from "react-router-dom";
 
 type MobileMenuProps = {
     onOpenTicketForm: () => void;
@@ -24,7 +25,7 @@ export const MobileMenu:React.FC<MobileMenuProps> = ({ onOpenTicketForm }) => {
         <>
             <div className={[styles.MobileMenuContainer, isMenuOpened ? styles.menuOpened : styles.menuClosed].join(" ")}>
                 <div className={styles.Menu}>
-                    <img src={require('../../img/logo.png')} className={styles.logo} alt=""/>
+                    <Link to='/' className={styles.logo} ><img src={require('../../img/logo.png')} alt=""/></Link>
                     {!isMenuOpened && 
                         (<img src={require('../../img/Hamburger_icon.png')} className={styles.hamburgerIcon} alt="" onClick={() => setIsMenuOpened(!isMenuOpened)}/>
                     )}
@@ -35,12 +36,11 @@ export const MobileMenu:React.FC<MobileMenuProps> = ({ onOpenTicketForm }) => {
                 {isMenuOpened && 
                 (<div className={styles.innerMenu}>
                     <div className={styles.nav}>
-                        <span className={styles.NavItem}>О компании</span>
-                        <span className={styles.NavItem}>Перевозка</span>
-                        <span className={styles.NavItem}>Преимущества</span>
-                        <span className={styles.NavItem}>Отзывы</span>
-                        <span className={styles.NavItem}>Наши услуги</span>
-                        <span className={styles.NavItem}>Связь</span>
+                        <Link to='/about'><span className={styles.NavItem}>О компании</span></Link>
+                        <Link to='/advantages'><span className={styles.NavItem}>Преимущества</span></Link>
+                        <Link to='/services'><span className={styles.NavItem}>Наши услуги</span></Link>
+                        <Link to='/reviews'><span className={styles.NavItem}>Отзывы</span></Link>
+                        <Link to='/contacts'><span className={styles.NavItem}>Связь</span></Link>
                     </div>
                     <h2 className={styles.phoneNumber}>8 (916) 031 25-99</h2>
                     <CustomizedButton className={styles.leaveTicketButton} onClick={onOpenTicketForm}>Оставить заявку</CustomizedButton>

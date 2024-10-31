@@ -10,60 +10,26 @@ import tonar from './img/tonar.jpg';
 import { MapBlock } from './components/MapBlock/MapBlock';
 import { Footer } from './components/Footer/Footer';
 import { TicketForm } from './components/TicketForm/TicketForm';
+import Homepage from './pages/Homepage';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import AboutUs from './pages/AboutUs';
+import Advantages from './pages/Advantages';
+import Services from './pages/Services';
+import Contacts from './pages/Contacts';
+import Reviews from './pages/Reviews';
 
 function App() {
 
-  const [isTicketFormOpen, setIsTicketFormOpen] = useState(false);
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
-  const advantagesBlock = {
-    title: 'Почему мы лучше?',
-    text: [['Гарантия соблюдения сроков поставки', 'Прямые поставки с карьеров и перевалок', 'Работаем напрямую, без посредников', 'Индивидуальный подход к клиентам', 'Юридическая чистота каждой сделки','Только профессиональные водители', 'Круглосуточная перевозка cамосвалами тонарами', 'Собственный автопарк']],
-    imagePath: tonar
-  }
-
-  useEffect(() => {
-    function handleWindowResize() {
-      setWindowWidth(window.innerWidth);
-    }
-  
-    window.addEventListener('resize', handleWindowResize);
-  
-    return () => {
-      window.removeEventListener('resize', handleWindowResize);
-    };
-  }, []);
-
-  const handleOpenTicketForm = () => {
-    setIsTicketFormOpen(true);
-  }
-
-  const handleCloseTicketForm = () => {
-    setIsTicketFormOpen(false);
-  }
-
-  let body = document.getElementsByTagName('body')[0];
-
-  if (isTicketFormOpen) {
-    body.classList.add('openedTicketForm');
-    body.classList.remove('closedTicketForm');
-  }
-
-  if (!isTicketFormOpen) {
-    body.classList.remove('openedTicketForm');
-    body.classList.add('closedTicketForm');
-  }
-
   return (
     <>
-      { isTicketFormOpen && (<TicketForm onCloseTicketForm={handleCloseTicketForm}/>)}
-      <div className={['container', isTicketFormOpen ? 'containerFiltered' : ''].join(' ')}>
-        <Header onOpenTicketForm={handleOpenTicketForm} windowWidth={windowWidth}/>
-        <MainCards/>
-        <TextBlock title={advantagesBlock.title} text={advantagesBlock.text} imagePath={advantagesBlock.imagePath}/>
-        <MapBlock onOpenTicketForm={handleOpenTicketForm}/>
-        <Footer/>
-      </div>
+    <Routes>
+      <Route path="/" element={<Homepage/>}/>
+      <Route path="/about" element={<AboutUs/>}/>
+      <Route path="/advantages" element={<Advantages/>}/>
+      <Route path="/services" element={<Services/>}/>
+      <Route path="/contacts" element={<Contacts/>}/>
+      <Route path="/reviews" element={<Reviews/>}/>
+    </Routes>  
     </>
   );
 }

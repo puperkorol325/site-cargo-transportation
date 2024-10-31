@@ -15,6 +15,7 @@
 }
 
 .logo {
+    display: flex;
     height: 80%;
     cursor: pointer;
 }
@@ -106,4 +107,8 @@
 .NavItem:hover::after {
     width: 100%;
     left: 0;
+}
+
+a {
+    text-decoration: none;
 }
