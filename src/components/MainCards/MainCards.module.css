@@ -1,84 +1,82 @@
 .cards {
-    width: 100%;
-    height: 400px;
-    display: flex;
-    justify-content: center;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
 }
 
 .card {
-    width: inherit;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  width: inherit;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .card1Background {
-    background:
-        linear-gradient(rgba(31, 31, 30, 0.8), rgba(45, 47, 77, 0.7)),
-        url('../../img/card1.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  background: linear-gradient(rgba(31, 31, 30, 0.8), rgba(45, 47, 77, 0.7)),
+    url("../../img/card1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .card2Background {
-    background:
-        linear-gradient(rgba(31, 31, 30, 0.8), rgba(45, 47, 77, 0.7)),
-        url('../../img/card2.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  background: linear-gradient(rgba(31, 31, 30, 0.8), rgba(45, 47, 77, 0.7)),
+    url("../../img/card2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .card3Background {
-    background:
-        linear-gradient(rgba(31, 31, 30, 0.8), rgba(45, 47, 77, 0.7)),
-        url('../../img/card3.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  background: linear-gradient(rgba(31, 31, 30, 0.8), rgba(45, 47, 77, 0.7)),
+    url("../../img/card3.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .title {
-    font-family: "Nunito", sans-serif;
-    color: white;
-    font-size: 220%;
-    font-weight: bold;
+  font-family: "Nunito", sans-serif;
+  color: white;
+  font-size: 220%;
+  font-weight: bold;
 }
 
 .link {
-    width: 30%;
-    height: 50px;
+  width: 30%;
+  height: 50px;
 }
 
 .moreButton {
-    width: 100%;
-    height: 100%;
-    transition: background-color 0.5s ease, color 0.5s ease;
+  width: 100%;
+  height: 100%;
+  transition:
+    background-color 0.5s ease,
+    color 0.5s ease;
 }
 
 .moreButton:hover {
-    background-color: rgb(87, 209, 87);
-    color: white;
+  background-color: rgb(87, 209, 87);
+  color: white;
 }
 
 @media screen and (max-width: 1000px) {
-    .cards {
-        flex-direction: column;
-        height: 600px;
-    }
+  .cards {
+    flex-direction: column;
+    height: 600px;
+  }
 
-    .card {
-        height: 200px;
-    }
+  .card {
+    height: 200px;
+  }
 }
 
 @media screen and (max-width: 600px) {
-    .moreButton {
-        width: 80%;
-        height: 60px;
-    }
+  .link {
+    width: 80%;
+    height: 60px;
+  }
 }
-

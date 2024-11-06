@@ -1,145 +1,148 @@
 .header {
-    width: 100%;
-    height: 300px;
-    background:
-        linear-gradient(rgba(31, 31, 30, 0.8), rgba(77, 80, 61, 0.5)),
-        url('../../img/card2.jpg');
-    background-position: bottom;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    display: flex;
-    justify-content: center;
+  width: 100%;
+  height: 300px;
+  background: linear-gradient(rgba(31, 31, 30, 0.8), rgba(77, 80, 61, 0.5)),
+    url("../../img/card2.jpg");
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
 }
 
 .headerContainer {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .Navbar {
-    width: 100%;
-    height: 150px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: white;
+  width: 100%;
+  height: 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
 }
 
 .logo {
-    display: flex;
-    height: 80%;
-    margin-left: 2%;
+  display: flex;
+  height: 70%;
+  margin-left: 2%;
 }
 
 .nav {
-    width: 60%;
-    display: flex;
-    justify-content: space-around;
-    font-family: "Nunito", sans-serif;
-    align-items: center;
+  width: 60%;
+  display: flex;
+  justify-content: space-around;
+  font-family: "Nunito", sans-serif;
+  align-items: center;
 }
 
 .NavItem {
-    color: black;
-    text-decoration: none;
-    font-size: 1.1em;
-    font-weight: 700;
-    cursor: pointer;
-    position: relative;
+  color: black;
+  text-decoration: none;
+  font-size: 1.1em;
+  font-weight: 700;
+  cursor: pointer;
+  position: relative;
 }
 
 .NavItem::after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    width: 0%;
-    height: 2px;
-    background-color: #42ad59;
-    transition: width 0.4s ease, left 0.4s ease;
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #42ad59;
+  transition:
+    width 0.4s ease,
+    left 0.4s ease;
 }
 
 .NavItem:hover::after {
-    width: 100%;
-    left: 0;
+  width: 100%;
+  left: 0;
 }
 
 .headerContainer {
-    width: 95%;
-    height: 100%;
+  width: 95%;
+  height: 100%;
 }
 
 .title {
-    display: flex;
-    color: white;
-    font-weight: 700;
-    font-size: 3em;
-    font-family: "Nunito", sans-serif;
-    margin: 0;
+  display: flex;
+  color: white;
+  font-weight: 700;
+  font-size: 3em;
+  font-family: "Nunito", sans-serif;
+  margin: 0;
 }
 
 .description {
-    color: white;
-    width: 80%;
-    font-size: 1.8em;
+  color: white;
+  width: 80%;
+  font-size: 1.8em;
 }
 
 .aboutUsButton {
-    width: 35%;
-    height: 70px;
-    font-size: 1.2em;
-    transition: background-color 0.5s ease, color 0.5s ease;
+  width: 35%;
+  height: 70px;
+  font-size: 1.2em;
+  transition:
+    background-color 0.5s ease,
+    color 0.5s ease;
 }
 
 .aboutUsButton:hover {
-    background-color: rgb(87, 209, 87);
-    color: white;
+  background-color: rgb(87, 209, 87);
+  color: white;
 }
 
 @media screen and (max-width: 1000px) {
-    .mainInfo {
-        width: 90%;
-    }
+  .mainInfo {
+    width: 90%;
+  }
 
-    .title {
-        font-size: 3em;
-    }
+  .title {
+    font-size: 3em;
+  }
 
-    .description {
-        font-size: 1.5em;
-    }
+  .description {
+    font-size: 1.5em;
+  }
 
-    .header {
-        height: 250px;
-    }
+  .header {
+    height: 250px;
+  }
 
-    .aboutUsButton {
-        width: 80%;
-    }
+  .aboutUsButton {
+    width: 80%;
+  }
 }
 
 @media screen and (max-width: 600px) {
-    .mainInfo {
-        width: 100%;
-        align-self: center;
-        padding-left: 1%;
-    }
+  .mainInfo {
+    width: 100%;
+    align-self: center;
+    padding-left: 1%;
+  }
 
-    .title {
-        font-size: 2.5em;
-    }
+  .title {
+    font-size: 2.5em;
+  }
 
-    .description {
-        font-size: 1.2em;
-        width: 100%;
-    }
+  .description {
+    font-size: 1.2em;
+    width: 100%;
+  }
 
-    .header {
-        height: 200px;
-    }
+  .header {
+    height: 200px;
+  }
 
-    .aboutUsButton {
-        width: 100%;
-    }
+  .aboutUsButton {
+    width: 100%;
+  }
 }

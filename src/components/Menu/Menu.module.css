@@ -1,114 +1,118 @@
 .Navbar {
-    width: 100%;
-    height: 175px;
-    margin: 0 auto;
-    font-family: "Nunito", sans-serif;
+  width: 100%;
+  height: 175px;
+  margin: 0 auto;
+  font-family: "Nunito", sans-serif;
 }
 
 .NavbarTop {
-    width: 100%;
-    height: 125px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 2px rgb(252, 252, 252) solid;
+  width: 100%;
+  height: 125px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px rgb(252, 252, 252) solid;
 }
 
 .logo {
-    display: flex;
-    height: 80%;
-    cursor: pointer;
+  display: flex;
+  height: 75%;
+  cursor: pointer;
 }
 
 .additionalInfo {
-    width: 50%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .phoneNumberContainer {
-    width: 50%;
-    height: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  width: 50%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .phoneNumber {
-    font-size: 2.1em;
-    margin: 0;
-    color: white;
+  font-size: 2.1em;
+  margin: 0;
+  color: white;
 }
 
 .email {
-    font-size: 1.3em;
-    margin: 0;
-    color: white;
-    cursor: pointer;
+  font-size: 1.3em;
+  margin: 0;
+  color: white;
+  cursor: pointer;
 }
 
 .leaveTicketContainer {
-    width: 40%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 40%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .leaveTicketButton {
-    font-family: inherit;
-    width: 75%;
-    height: 55%;
-    cursor: pointer;
-    transition: background-color 0.5s ease, color 0.5s ease;
+  font-family: inherit;
+  width: 75%;
+  height: 55%;
+  cursor: pointer;
+  transition:
+    background-color 0.5s ease,
+    color 0.5s ease;
 }
 
-.leaveTicketButton:hover{
-    background-color: rgb(87, 209, 87);
-    color: white;
+.leaveTicketButton:hover {
+  background-color: rgb(87, 209, 87);
+  color: white;
 }
 
 .NavbarBottom {
-    width: 100%;
-    height: 50px;
-    display: flex;
-    justify-content: flex-end;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .nav {
-    width: 65%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  width: 65%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .NavItem {
-   font-size: 1.1em;
-   font-weight: 700;
-   cursor: pointer;
-   position: relative;
-   height: 45%;
-   color: white;
+  font-size: 1.1em;
+  font-weight: 700;
+  cursor: pointer;
+  position: relative;
+  height: 45%;
+  color: white;
 }
 
 .NavItem::after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    width: 0%;
-    height: 2px;
-    background-color: #42ad59;
-    transition: width 0.4s ease, left 0.4s ease;
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #42ad59;
+  transition:
+    width 0.4s ease,
+    left 0.4s ease;
 }
 
 .NavItem:hover::after {
-    width: 100%;
-    left: 0;
+  width: 100%;
+  left: 0;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
